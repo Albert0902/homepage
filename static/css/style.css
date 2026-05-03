@@ -553,7 +553,7 @@ body {
 
 .honor-popup-btn,
 .honor-popup-btn-gh {
-    display: inline-block;
+    display: none;
     margin-top: 12px;
     padding: 8px 24px;
     color: #fff;
@@ -563,8 +563,14 @@ body {
     transition: background 0.2s ease, transform 0.2s ease;
 }
 
+.honor-popup-btn.show,
+.honor-popup-btn-gh.show {
+    display: inline-block;
+}
+
 .honor-popup-btn {
     background: #00a1d6;
+    margin-right: 24px;
 }
 
 .honor-popup-btn:hover {
@@ -583,8 +589,9 @@ body {
 
 .honor-popup-btns {
     display: flex;
-    gap: 10px;
     margin-top: 12px;
+    flex-wrap: nowrap;
+    justify-content: center;
 }
 
 .left-time-title {
