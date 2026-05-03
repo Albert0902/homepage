@@ -54,30 +54,11 @@ function getCookie(name) {
 
 
 
-
-
-
-
-
-
-
-
-
 document.addEventListener('DOMContentLoaded', function () {
-
-
-
-
-
 
     var html = document.querySelector('html');
     var themeState = getCookie("themeState") || "Light";
     var tanChiShe = document.getElementById("tanChiShe");
-
-
-
-
-
 
     function changeTheme(theme) {
         tanChiShe.src = "./static/svg/snake-" + theme + ".svg";
@@ -85,12 +66,6 @@ document.addEventListener('DOMContentLoaded', function () {
         setCookie("themeState", theme, 365);
         themeState = theme;
     }
-
-
-
-
-
-
 
     var Checkbox = document.getElementById('myonoffswitch')
     Checkbox.addEventListener('change', function () {
@@ -102,8 +77,6 @@ document.addEventListener('DOMContentLoaded', function () {
             changeTheme("Dark");
         }
     });
-
-
 
     if (themeState == "Dark") {
         Checkbox.checked = false;
@@ -134,15 +107,15 @@ document.addEventListener('DOMContentLoaded', function () {
 
         if (linkHref) {
             honorPopupLink.href = linkHref;
-            honorPopupLink.style.display = 'block';
+            honorPopupLink.classList.add('show');
         } else {
-            honorPopupLink.style.display = 'none';
+            honorPopupLink.classList.remove('show');
         }
         if (linkGhHref) {
             honorPopupLinkGh.href = linkGhHref;
-            honorPopupLinkGh.style.display = 'block';
+            honorPopupLinkGh.classList.add('show');
         } else {
-            honorPopupLinkGh.style.display = 'none';
+            honorPopupLinkGh.classList.remove('show');
         }
     });
 
@@ -150,24 +123,6 @@ document.addEventListener('DOMContentLoaded', function () {
         if (e.target.id === 'honorPopupLink' || e.target.id === 'honorPopupLinkGh') return;
         document.getElementById('honorPopup').classList.remove('active');
     });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 });
 
