@@ -231,13 +231,18 @@ body {
 
 #blurSlider::-webkit-slider-thumb {
     -webkit-appearance: none;
-    width: 16px;
-    height: 16px;
+    width: 12px;
+    height: 12px;
     border-radius: 50%;
     background: var(--fill);
     cursor: pointer;
     border: 1px solid rgba(0,0,0,0.2);
-    margin-top: -6px;
+    margin-top: -4px;
+    transition: transform 0.2s;
+}
+
+#blurSlider:hover::-webkit-slider-thumb {
+    transform: scale(1.3);
 }
 
 #blurSlider::-moz-range-track {
@@ -247,12 +252,17 @@ body {
 }
 
 #blurSlider::-moz-range-thumb {
-    width: 16px;
-    height: 16px;
+    width: 12px;
+    height: 12px;
     border-radius: 50%;
     background: var(--fill);
     cursor: pointer;
     border: 1px solid rgba(0,0,0,0.2);
+    transition: transform 0.2s;
+}
+
+#blurSlider:hover::-moz-range-thumb {
+    transform: scale(1.3);
 }
 
 .iconItem i,
