@@ -59,7 +59,7 @@ html {
     --item_left_text_color: #ffffff;
     --footer_text_color: #ffffff;
     --left_tag_item: rgb(27 42 57 / 20%);
-    --card_filter: 15px;
+    --card_filter: 12px;
     --back_filter: 0px;
     --back_filter_color: #00000030;
     --fill:#ffffff;
@@ -79,7 +79,7 @@ html {
     --item_left_text_color: #494949;
     --footer_text_color: #ffffff;
     --left_tag_item: #c7e1fa;
-    --card_filter: 0px;
+    --card_filter: 12px;
     --back_filter: 20px;
     --back_filter_color: #00000030;
     --fill:#000000;
@@ -99,7 +99,7 @@ html {
     --item_left_text_color: #494949;
     --footer_text_color: #222222;
     --left_tag_item: linear-gradient(50deg, #a2d1ff, #ffffff);
-    --card_filter: 0px;
+    --card_filter: 8px;
     --back_filter: 0px;
     --back_filter_color: #00000000;
     --fill:#000000;
@@ -113,13 +113,13 @@ html {
     --gradient: linear-gradient(120deg, #bd34fe, #e0321b 30%, #41d1ff 60%);
     --purple_text_color: #747bff;
     --text_bg_color: rgb(240 243 247);
-    --item_bg_color: rgb(247 247 247);
+    --item_bg_color: rgb(247 247 247 / 80%);
     --item_hover_color: rgba(244, 245, 246, 0.5);
     --item_left_title_color: #000000;
     --item_left_text_color: #494949;
     --footer_text_color: #222222;
     --left_tag_item: #ffffff;
-    --card_filter: 0px;
+    --card_filter: 8px;
     --back_filter: 0px;
     --back_filter_color: #00000000;
     --fill:#000000;
@@ -139,8 +139,14 @@ html {
     --item_left_text_color: #ffffff;
     --footer_text_color: #ffffff;
     --left_tag_item: rgb(27 42 57 / 20%);
-    --card_filter: 0px;
+    --card_filter: 12px;
     --back_filter: 19px;
     --back_filter_color: #95353530;
     --fill:#ffffff;
+}
+
+/* 背景切换：data-bg="2" 时换成 background2.jpg + 紫色文字颜色 */
+html[data-bg="2"] body {
+    background-image: url(../img/background2.jpg) !important;
+    --purple_text_color: #747bff;
 }
