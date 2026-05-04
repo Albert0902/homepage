@@ -168,15 +168,91 @@ body {
     backdrop-filter: blur(var(--card_filter));
     -webkit-backdrop-filter: blur(var(--card_filter));
     background: var(--item_bg_color);
+    border: 1px solid rgba(255, 255, 255, 0.15);
     align-items: center;
     justify-content: center;
     transition: width 0.3s ease, opacity 0.3s ease;
     flex-shrink: 0;
+    cursor: pointer;
 }
 
 .iconItem:hover {
     width: 55px;
     background: var(--item_hover_color);
+}
+
+/* 模糊度控制区 */
+.blurControl {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 0 10px;
+    margin-left: 10px;
+    background: var(--item_bg_color);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 7px;
+    backdrop-filter: blur(var(--card_filter));
+    -webkit-backdrop-filter: blur(var(--card_filter));
+    flex-shrink: 0;
+    height: 43px;
+    box-sizing: border-box;
+}
+
+.blurLabel {
+    font-size: 12px;
+    color: var(--item_left_title_color);
+    white-space: nowrap;
+    cursor: default;
+}
+
+.blurValue {
+    font-size: 12px;
+    color: var(--item_left_title_color);
+    min-width: 18px;
+    text-align: right;
+}
+
+/* 模糊度滑杆 */
+#blurSlider {
+    flex: 1;
+    height: 4px;
+    cursor: pointer;
+    -webkit-appearance: none;
+    appearance: none;
+    background: rgba(255,255,255,0.3);
+    border-radius: 2px;
+    outline: none;
+}
+
+#blurSlider::-webkit-slider-runnable-track {
+    height: 4px;
+    border-radius: 2px;
+}
+
+#blurSlider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: var(--fill);
+    cursor: pointer;
+    border: 1px solid rgba(0,0,0,0.2);
+    margin-top: -6px;
+}
+
+#blurSlider::-moz-range-track {
+    height: 4px;
+    border-radius: 2px;
+    background: rgba(255,255,255,0.3);
+}
+
+#blurSlider::-moz-range-thumb {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: var(--fill);
+    cursor: pointer;
+    border: 1px solid rgba(0,0,0,0.2);
 }
 
 .iconItem i,
@@ -209,6 +285,7 @@ body {
     backdrop-filter: blur(var(--card_filter));
     -webkit-backdrop-filter: blur(var(--card_filter));
     background: var(--item_bg_color);
+    border:1px solid rgba(255, 255, 255, 0.15);
 }
 
 .left-des {
@@ -358,6 +435,7 @@ body {
     width: calc(25% - 14px);
     backdrop-filter: blur(var(--card_filter));
     -webkit-backdrop-filter: blur(var(--card_filter));
+    border: 1px solid rgba(255, 255, 255, 0.15);
     transition: opacity 0.5s ease, background-color 0.2s ease, border 0.2s ease, transform 0.3s ease;
 }
 
@@ -444,6 +522,9 @@ body {
     font-size: 17px;
     margin: 0 3px;
     padding: 2px 4px;
+    backdrop-filter: blur(var(--card_filter));
+    -webkit-backdrop-filter: blur(var(--card_filter));
+    border: 1px solid rgba(255, 255, 255, 0.15);
 }
 
 .title {
@@ -708,4 +789,26 @@ footer {
     .index-logo {
         display: none;
     }
+}
+
+/* 底部固定提示 */
+.bottom-tip {
+    display: none;
+    position: fixed;
+    background: var(--item_bg_color);
+    color: var(--item_left_title_color);
+    padding: 6px 14px;
+    border-radius: 12px;
+    font-size: 13px;
+    backdrop-filter: blur(var(--card_filter));
+    -webkit-backdrop-filter: blur(var(--card_filter));
+    pointer-events: none;
+    z-index: 9999;
+    white-space: nowrap;
+    transition: none;
+    transform: translateX(-50%);
+}
+
+.bottom-tip.show {
+    display: block;
 }
