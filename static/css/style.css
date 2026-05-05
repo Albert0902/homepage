@@ -236,8 +236,7 @@ body {
     border-radius: 50%;
     background: var(--fill);
     cursor: pointer;
-    border: 1px solid rgba(0,0,0,0.2);
-    margin-top: -4px;
+    border: none;
     transition: transform 0.2s;
 }
 
@@ -257,7 +256,7 @@ body {
     border-radius: 50%;
     background: var(--fill);
     cursor: pointer;
-    border: 1px solid rgba(0,0,0,0.2);
+    border: none;
     transition: transform 0.2s;
 }
 
